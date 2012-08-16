@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS Filters Polyfill Test</title>
+<style>
+body {
+	color: #666;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.filter {
+	overflow: hidden;
+	margin: 5px;
+	border: 2px dashed #999;
+}
+.filter:hover {
+	filter: none;
+}
+.filter h1 {
+	color: #85c24c;
+}
+.filter > img {
+	float: left;
+	margin-right: 10px;
+}
+.filter1 {
+	filter: grayscale(1);
+}
+.filter2 {
+	filter: sepia(1);
+}
+.filter3 {
+	filter: blur(4px);
+}
+.filter4 {
+	filter: invert(1);
+}
+.filter5 {
+	filter: brightness(1);
+}
+.filter6 {
+	zoom: 1;
+	filter: drop-shadow(4px 4px 4px #000000);
+}
+.filter7 {
+	zoom: 1;
+	filter: drop-shadow(0 0 4px #000000);
+}
+</style>
+<link rel="stylesheet" href="styles.css" />
+<script src="cssParser.js"></script>
+<script src="css-filters-polyfill.js"></script>
+<script>
+</script>
+</head>
+<body>
+	<img src="picture.jpg" width="600" height="516" alt="" class="filter filter1">
+	<img src="picture.jpg" width="600" height="516" alt="" class="filter filter2">
+	<img src="picture.jpg" width="600" height="516" alt="" class="filter filter3">
+	<img src="picture.jpg" width="600" height="516" alt="" class="filter filter4">
+	<img src="picture.jpg" width="600" height="516" alt="" class="filter filter5">
+	<img src="picture.jpg" width="600" height="516" alt="" class="filter filter6">
+	<img src="picture.jpg" width="600" height="516" alt="" class="filter filter7">
+	<div class="filter filter1">
+		<h1>Headline</h1>
+		<img src="picture-small.jpg" width="200" height="119">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</div>
+	</div>
+	<div class="filter filter2">
+		<h1>Headline</h1>
+		<img src="picture-small.jpg" width="200" height="119">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</div>
+	</div>
+	<div class="filter filter3">
+		<h1>Headline</h1>
+		<img src="picture-small.jpg" width="200" height="119">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</div>
+	</div>
+	<div class="filter filter4">
+		<h1>Headline</h1>
+		<img src="picture-small.jpg" width="200" height="119">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</div>
+	</div>
+	<div class="filter filter5">
+		<h1>Headline</h1>
+		<img src="picture-small.jpg" width="200" height="119">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</div>
+	</div>
+	<div class="filter filter6">
+		<h1>Headline</h1>
+		<img src="picture-small.jpg" width="200" height="119">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</div>
+	</div>
+	<div class="filter filter7">
+		<h1>Headline</h1>
+		<img src="picture-small.jpg" width="200" height="119">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</div>
+	</div>
+</body>
+</html>

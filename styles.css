@@ -1,0 +1,32 @@
+@media screen, print {
+	.filter1b {
+		filter: grayscale(1);
+	}
+	.filter2b {
+		filter: sepia(1);
+	}
+	.filter3b {
+		filter: blur(2px);
+	}
+	.filter1b:hover,
+	.filter2b:hover,
+	.filter3b:hover {
+		filter: none;
+	}
+}
+
+.filter1a {
+	filter: grayscale(1);
+}
+.filter2a {
+	filter: sepia(1);
+}
+.filter3a {
+	filter: blur(2px);
+}
+.filter1a:hover,
+.filter2a:hover,
+.filter3a:hover {
+	filter: none;
+}
+

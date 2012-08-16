@@ -1,0 +1,7 @@
+AddType text/x-component .htc
+
+AuthType None
+
+Order deny,allow
+Allow from all
+Satisfy any
