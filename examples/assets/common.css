@@ -4,7 +4,7 @@ body {
 	margin: 0 auto;
 	padding: 30px;
 	background: #EEE;
-	color: #666;
+	color: #333;
 	font-family: Arial, Helvetica, sans-serif;
 	text-shadow: 1px 1px 0 #FFF;
 }
@@ -16,6 +16,9 @@ ul, li {
 }
 li {
 	margin-bottom: 50px;
+}
+a {
+	color: #073;
 }
 .box {
 	display: table;
