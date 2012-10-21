@@ -43,7 +43,7 @@ Not supported are IE 10(!), Opera and Opera Mini, as well as Chrome on Android.
 
 ##Setup##
 
-First create a `<script>` element in which you define the absolute path to the polyfill library (the stuff in the /lib/ subfolder) in a variable named `polyfilter_scriptpath`, like so:  
+First create a `<script>` element in which you define the **absolute(!)** path to the polyfill library (the stuff in the /lib/ subfolder) in a variable named `polyfilter_scriptpath`, like so:  
 
 ```html
 <script>  
@@ -51,6 +51,7 @@ First create a `<script>` element in which you define the absolute path to the p
 </script>
 ```
 
+This is important for the IEs.  
 Then you link `cssParser.js` and `css-filters-polyfill.js` from the polyfill library. 
 
 ```html
