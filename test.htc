@@ -1,5 +1,0 @@
-<component>
-<script type="text/javascript">
-alert('BOOM');
-</script>
-</component>

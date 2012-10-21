@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Howtos</title>
+	<link rel="stylesheet" href="assets/common.css">
+</head>
+<body>
+	<h1>Howtos</h1>
+
+	<h2>Declarative or Programmatic Definition</h2>
+	<p>You can apply filters in a declarative way <a href="declarative-vs-programmatic/declarative.html">via stylesheets</a>, or you can set them programmatically via <a href="declarative-vs-programmatic/programmatic.html">JavaScript</a> or <a href="declarative-vs-programmatic/programmatic-via-jquery.html">jQuery</a>.</p>
+
+	<h2>Embedded or External Stylesheets</h2>
+	<p>If you specify filters in a stylesheet, this stylesheet may be <a href="stylesheet-embedded-vs-external/embedded.html">embedded</a> or <a href="stylesheet-embedded-vs-external/external.html">referenced externally</a>. Inline styles are currently not supported.</p>
+
+	<h2>Animated Filters</h2>
+	<p>Most of the time filters will be static. But if you need to animate them, you can do so using plain <a href="animating-natively-vs-jquery/natively.html">JavaScript</a>, or you can fiddle it in <a href="animating-natively-vs-jquery/jquery.html">jQuery</a>. The latter one just making sense if you are after one of the easing-methods of jQuery.</p>
+
+	<h2>Initialization of the Polyfill</h2>
+	<p>For the polyfill to initialize as quickly as possible, it either attachs itself do <a href="loading-via-vanillajs-vs-contentloaded-vs-jquery/jquery.html">jQuery's <code>$(document).ready</code></a>, or you can offer it the <a href="loading-via-vanillajs-vs-contentloaded-vs-jquery/contentloaded.html">contentLoaded library</a>. If none of both is available, the polyfill <a href="loading-via-vanillajs-vs-contentloaded-vs-jquery/vanilla.html">will use one of the native events that fits best</a>.</p>
+	
+	<h1>Compatibility</h1>
+	<h2>Desktop</h2>
+	<table width="100%" cellpadding="0" cellspacing="0" border="0">
+		<thead>
+			<tr>
+				<td><img src="assets/browserlogos/chrome.png" alt="Google Chrome" width="64" height="64"></td>
+				<td><img src="assets/browserlogos/safari.png" alt="Safari" width="64" height="64"></td>
+				<td><img src="assets/browserlogos/firefox.png" alt="Mozilla Firefox" width="64" height="64"></td>
+				<td><img src="assets/browserlogos/ie.png" alt="Internet Explorer" width="64" height="64"></td>
+				<td><img src="assets/browserlogos/opera.png" alt="Opera" width="64" height="64"></td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>20+</td>
+				<td>6+</td>
+				<td>4+</td>
+				<td>6-9 (no 10)</td>
+				<td>no</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h2>Mobile</h2>
+	<table width="100%" cellpadding="0" cellspacing="0" border="0">
+		<thead>
+			<tr>
+				<td><img src="assets/browserlogos/chrome.png" alt="Google Chrome" width="64" height="64"></td>
+				<td><img src="assets/browserlogos/ios.png" alt="iOS Safari" width="64" height="64"></td>
+				<td><img src="assets/browserlogos/firefox.png" alt="Mozilla Firefox" width="64" height="64"></td>
+				<td><img src="assets/browserlogos/ie.png" alt="Internet Explorer" width="64" height="64"></td>
+				<td><img src="assets/browserlogos/opera.png" alt="Opera" width="64" height="64"></td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>no</td>
+				<td>6+</td>
+				<td>4+, but very slow</td>
+				<td>just grayscale works in WP7</td>
+				<td>no</td>
+			</tr>
+		</tbody>
+	</table>
+
+</body>
+</html>

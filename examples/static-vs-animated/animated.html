@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Animated Filter</title>
+	<link rel="stylesheet" href="../assets/common.css">
+</head>
+<body>
+	<h1>Animated Filter</h1>
+	
+	<ul>
+		<li>
+			<h2>elem.style.polyfilter = 'blur(<span id="displayvalue">0</span>px)';</h2>
+			<div id="filtered" class="box">
+				<img src="../assets/picture.jpg" width="300" height="258" alt="">
+				<div>
+					<h3>Headline</h3>
+					<img src="../assets/picture-small.jpg" width="200" height="119">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</div>
+			</div>
+		</li>
+	</ul>
+	
+	<xmp>
+		var value = 0, 
+		    increment = 1
+		    elem = document.getElementById('filtered');
+	
+		window.setInterval(function(){
+		    value += increment;
+		    elem.style.polyfilter = 'blur(' + value + 'px)';
+		    if(value >= 10 || value <= 0) increment *= -1;
+		},100);
+	</xmp>
+
+
+	<script>
+		// this is important for the IEs
+		var polyfilter_scriptpath = '/css-filters-polyfill/lib/';
+	</script>
+	<script src="../../lib/contentloaded.js"></script>
+	<script src="../../lib/cssParser.js"></script>
+	<script src="../../lib/css-filters-polyfill.js"></script>
+
+	<script>
+		// Animation code
+		var value = 0, 
+			increment = 1
+			elem = document.getElementById('filtered'),
+			displayvalue_elem = document.getElementById('displayvalue');
+	
+		window.setInterval(function(){
+			value += increment;
+			elem.style.polyfilter = 'blur(' + value + 'px)';
+			displayvalue_elem.innerHTML = value;
+			if(value >= 10 || value <= 0) increment *= -1;
+		},100);
+	</script>
+</body>
+</html>

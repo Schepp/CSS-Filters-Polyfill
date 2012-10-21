@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Declarative Filter Definition</title>
+	<link rel="stylesheet" href="../assets/common.css">
+
+	<style>
+		/* Declarative filter definition */
+		#filter {
+			filter: grayscale(1);
+		}
+	</style>
+	
+</head>
+<body>
+	<h1>Declarative Filter Definition</h1>
+	
+	<ul>
+		<li>
+			<h2>Declaratively applied filter via stylesheet: <br><code>#filter1 {filter: grayscale(1);}</code></h2>
+			<div id="filter" class="box filter">
+				<img src="../assets/picture.jpg" width="300" height="258" alt="">
+				<div>
+					<h3>Headline</h3>
+					<img src="../assets/picture-small.jpg" width="200" height="119">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</div>
+			</div>
+		</li>
+	</ul>
+
+	<script>
+		// this is important for the IEs
+		var polyfilter_scriptpath = '/css-filters-polyfill/lib/';
+	</script>
+	<script src="../../lib/contentloaded.js"></script>
+	<script src="../../lib/cssParser.js"></script>
+	<script src="../../lib/css-filters-polyfill.js"></script>
+</body>
+</html>

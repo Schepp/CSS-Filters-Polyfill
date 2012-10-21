@@ -1,0 +1,58 @@
+/* General definitions */
+body {
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 30px;
+	background: #EEE;
+	color: #666;
+	font-family: Arial, Helvetica, sans-serif;
+	text-shadow: 1px 1px 0 #FFF;
+}
+ul, li {
+	display: block;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+li {
+	margin-bottom: 50px;
+}
+.box {
+	display: table;
+	margin: 5px;
+	padding: 10px;
+	border: 2px dashed #999;
+	zoom: 1;
+}
+h1 {
+	margin-top: 60px;
+}
+h2 {
+	margin-bottom: 5px;
+}
+h3 {
+	color: #85c24c;
+	margin-top: 0;
+}
+img {
+	float: left;
+	margin-right: 10px;
+}
+xmp {
+	color: #333;
+	line-height: 1.7;
+}
+table {
+	border-collapse: collapse;
+	border: #CCC 1px solid;
+}
+td {
+	width: 100px;
+	padding: 4px 0;
+	text-align: center;
+	border-left: #CCC 1px solid;
+}
+td img {
+	float: none;
+	margin: 0;
+}
