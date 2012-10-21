@@ -1,4 +1,4 @@
-Polyfilter - a CSS-Filters-Polyfill
+Polyfilter - a CSS Filters Polyfill
 ===================================
 
 This polyfill takes the official CSS filters syntax and translates it to the different equivalent techniques that the browsers know for those effects:
