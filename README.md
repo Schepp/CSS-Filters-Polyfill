@@ -69,7 +69,7 @@ In an ideal world you should minify and concatenate both of them together with y
 
 This polyfill supports filter declarations in embedded (`<style>`) and external (`<link rel="stylesheet">`) stylesheets. It does not support inline-styles (i.e. style-attributes).
 
-There you define a filter by using the unprefixed W3C syntax, e.g.: 
+You define a filter by using the unprefixed W3C syntax, e.g.: 
 
 ```css
 .element{
