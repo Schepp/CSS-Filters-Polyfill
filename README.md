@@ -38,15 +38,15 @@ Currently the polyfill is able to support
 
 and 
 
-* iOS 6+ Safari/Chrome and 
-* Firefox 4+ on Mobile
+* iOS 6+ Safari/Chrome 
+* Firefox 4+ on Mobile (albeit slow) and
 * IE on Windows Phone 7, which just supports grayscale.
 
 Not supported are IE 10(!), Opera and Opera Mini, as well as Chrome on Android.
 
 ###A word regarding IE 10###
 
-Why is IE 6 - 9 supported, but not IE10? Well, since Microsoft decided to switch sides and to now follow standards, they killed their old proprietary filters in IE 10 which I rely on for emulation. On the other hand they introduced the real CSS filters, but those are limited to a usage inside SVGs. They cannot be applied to HTML-elements. This is why we are left at the end with no support.
+Why is IE 6 - 9 supported, but not IE10? Well, since Microsoft decided to switch sides and to now follow standards, they killed their old proprietary filters in IE 10 which I rely on for emulation. On the other hand they introduced the real CSS filters, but those are limited to a usage inside SVGs. They cannot be applied to HTML-elements. This is why we are left at the end with no hook/support at all :(
 
 If CSS filters are super important for you in IE 10, meaning more important than other improvements of the platform, you could kick IE 10 back into IE 9 mode where all of the proprietary filters are turned back on. You can do this by setting the following `<meta>` in the `<head>`:
 
@@ -101,8 +101,13 @@ or via jQuery:
 ```javascript
 $(element).css('polyfilter','blur(10px)');
 ```
+And you can even assign two filters at once, e.g.
 
-_Note: This does not work for IE 6 & 7. They just ignore any programmatic assigment._
+```javascript
+element.style.polyfilter = 'sepia(1) blur(10px)';
+```
+
+_Note: This does not work for IE 6 & 7. They just ignore any programmatic assignment._
 
 ###Animations###
 
@@ -120,7 +125,7 @@ window.setInterval(function(){
 },100);
 ```
 
-_Note: This again does not work for IE 6 & 7. They just ignore any programmatic assigment._
+_Note: This again does not work for IE 6 & 7. They just ignore any programmatic assignment._
 
 ###Examples and Howtos###
 
