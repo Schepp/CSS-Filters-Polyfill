@@ -88,6 +88,14 @@ You define a filter by using the unprefixed W3C syntax, e.g.:
 }
 ```
 
+And you can even assign two filters at once, e.g.
+
+```css
+.element{
+	filter: sepia(1) blur(10px);
+}
+```
+
 ###Programmatic assignment###
 
 In addition the polyfill also extends the JavaScript CSSStyleDeclaration object, so that you can assign filter styles on the fly as you are used to with CSS. But instead of exposing a `element.style.filter` property as one would think, you instead need to address `element.style.polyfilter`, e.g.:
@@ -101,7 +109,7 @@ or via jQuery:
 ```javascript
 $(element).css('polyfilter','blur(10px)');
 ```
-And you can even assign two filters at once, e.g.
+And, again, you can assign two filters at once, e.g.
 
 ```javascript
 element.style.polyfilter = 'sepia(1) blur(10px)';
