@@ -93,7 +93,7 @@ You define a filter by using the unprefixed W3C syntax, e.g.:
 In addition the polyfill also extends the JavaScript CSSStyleDeclaration object, so that you can assign filter styles on the fly as you are used to with CSS. But instead of exposing a `element.style.filter` property as one would think, you instead need to address `element.style.polyfilter`, e.g.:
 
 ```javascript
-element.style.polyfilter = 'blur(10px)';`
+element.style.polyfilter = 'blur(10px)';
 ```
 
 or via jQuery:
