@@ -32,6 +32,7 @@ Currently the polyfill is able to support
 
 * Chrome 20+, 
 * Safari 6+, 
+* Yandex 1+,
 * Firefox 4+ and 
 * IE 6 - 9 on desktop (IE 6 & 7 slightly degraded), 
 
@@ -42,6 +43,16 @@ and
 * IE on Windows Phone 7, which just supports grayscale.
 
 Not supported are IE 10(!), Opera and Opera Mini, as well as Chrome on Android.
+
+###A word regarding IE 10###
+
+Why is IE 6 - 9 supported, but not IE10? Well, since Microsoft decided to switch sides and to now follow standards, they killed their old proprietary filters in IE 10 which I rely on for emulation. On the other hand they introduced the real CSS filters, but those are limited to a usage inside SVGs. They cannot be applied to HTML-elements. This is why we are left at the end with no support.
+
+If CSS filters are super important for you in IE 10, meaning more important than other improvements of the platform, you could kick IE 10 back into IE 9 mode where all of the proprietary filters are turned back on. You can do this by setting the following `<meta>` in the `<head>`:
+
+```html
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+```
 
 ##Setup##
 
