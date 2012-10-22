@@ -51,7 +51,7 @@ Why is IE 6 - 9 supported, but not IE10? Well, since Microsoft decided to switch
 If CSS filters are super important for you in IE 10, meaning more important than other improvements of the platform, you could kick IE 10 back into IE 9 mode where all of the proprietary filters are turned back on. You can do this by setting the following `<meta>` in the `<head>`:
 
 ```html
-<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
 ```
 
 ##Setup##
