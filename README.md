@@ -54,14 +54,14 @@ If CSS filters are *super important* for you in IE 10, meaning more important th
 <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
 ```
 
-**But know that if you so you also lose all the other advancements of IE 10 over IE 9**. And that's a lot, namely being:  
+**But know that if you so you also lose all the other advancements of IE 10 over IE 9**! And that's a lot, namely being:  
 HTML5 forms, Application Cache, Web Sockets, Web Workers, History, Drag and Drop, XHR 2, File API, IndexedDB, Page Visibility, DeviceOrientation, Touch, Pointer and Gesture APIs, requestAnimationFrame, CSS Animations, CSS Transitions, CSS 3D transforms, CSS Gradients, CSS Exclusions, CSS FlexBox, CSS Grid Layout, CSS Multi-column layout and finally CSS Regions.
 
 That's a though call, I know.
 
 ###And what about Opera?###
 
-Opera offers none of the hooks I could use to simulate CSS filter effects. So it is basically up to you people requesting support for CSS filter effects in Opera. But I might guess that you will remain unheard since Opera is very mobile and low-end device focussed and filters hurt performance a lot. So it could take its fair amount of time to convince them.
+Opera offers none of the hooks I could use to simulate CSS filter effects. So it is basically up to you people requesting support for CSS filter effects from Opera. But I might guess that you will remain unheard since Opera is very mobile and low-end device focused and filters hurt performance a lot. So it could take its fair amount of time to convince them.
 
 Anyway, as far as I am concerned, I took care that once Opera supports filters, even when only prefixed, this polyfill will pick up support automagically.
 
