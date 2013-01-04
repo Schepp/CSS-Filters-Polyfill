@@ -46,18 +46,9 @@ Not supported are IE 10(!), Opera and Opera Mini, as well as Chrome on Android (
 
 ###A word regarding IE 10###
 
-Why is IE 6 - 9 supported, but not IE 10? Well, since Microsoft decided to switch sides and to now follow standards, they killed their old proprietary filters in IE 10 which I rely on for emulation. On the other hand they introduced the real CSS filters, but those are limited to a usage inside SVGs. They cannot be applied to HTML-elements. This is why we are left at the end with no hook/support at all :(
+Why is IE 6 - 9 supported, but not IE 10? Well, since Microsoft decided to switch sides and to now follow standards, they killed their old proprietary filters in IE 10 which I rely on for emulation. On the other hand they introduced the real CSS filters, but those are limited to a usage inside SVGs. They cannot be applied to HTML-elements. 
 
-If CSS filters are *super important* for you in IE 10, meaning more important than other improvements of the platform, you could kick IE 10 back into IE 9 mode where all of the proprietary filters are turned back on. You can do this by setting the following `<meta>` in the `<head>`:
-
-```html
-<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
-```
-
-**But know that if you so you also lose all the other advancements of IE 10 over IE 9**! And that's a lot, namely being:  
-HTML5 forms, Application Cache, Web Sockets, Web Workers, History, Drag and Drop, XHR 2, File API, IndexedDB, Page Visibility, DeviceOrientation, Touch, Pointer and Gesture APIs, requestAnimationFrame, CSS Animations, CSS Transitions, CSS 3D transforms, CSS Gradients, CSS Exclusions, CSS FlexBox, CSS Grid Layout, CSS Multi-column layout and finally CSS Regions.
-
-That's a though call, I know.
+Even triggering legacy mode does not help any more. So this is why we are left at the end with no hook/support at all in IE10 :(
 
 ###And what about Opera?###
 
@@ -145,6 +136,12 @@ window.setInterval(function(){
 ```
 
 _Note: This again does not work for IE 6 & 7. They just ignore any programmatic assignment._
+
+###A note on stylesheet caching###
+
+Since the polyfill needs to re-retrieve and parse every stylesheet again I implemented localStorage caching. Contents of stylesheets that have successfully been retrieved will get stored in localStorage. On the next reload of the page the polyfill will use the stylesheet from localStorage so that it renders quicker. When that is done it will retrieve the file and replace localStorage contents. That means that when you develop you would need to refresh twice to see any changes you made regarding filters. 
+
+But to make your life easier I implemented a mechanism that looks on the hostname, and when it is "localhost" or when it uses the TLD ".local" or when it's an IP address it turns that caching off.
 
 ###Examples and Howtos###
 
