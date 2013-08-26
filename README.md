@@ -30,31 +30,39 @@ Have a look at [this overview](http://schepp.github.io/CSS-Filters-Polyfill/exam
 
 Currently the polyfill is able to support
 
-* Chrome 20+, 
+* Chrome 20+ (brightness filter 28+), 
+* Opera 15+ 
 * Safari 6+, 
 * Yandex 1+,
-* Firefox 4+ and 
+* Firefox 4+, 
 * IE 6 - 9 on desktop (IE 6 & 7 slightly degraded), 
 
 and 
 
-* iOS 6+ Safari/Chrome 
-* Firefox 4+ on Mobile (albeit slow) and
-* IE on Windows Phone 7, which just supports grayscale.
+* iOS 6+ Safari/Chrome/Webview
+* Chrome 28+ on Android, 
+* Blackberry Browser 10+, 
+* Firefox 4+ on Mobile,
+* IE on Windows Phone 7+, which just supports grayscale.
 
-Not supported are IE 10(!), Opera and Opera Mini, as well as Chrome on Android (they didn't turn on CSS filter effects there as of yet).
+##Not supported Browsers##
 
-###A word regarding IE 10###
+* IE 10+,
+* older Presto-based Operas,
+* Opera Mini,
+* Android browser
 
-Why is IE 6 - 9 supported, but not IE 10? Well, since Microsoft decided to switch sides and to now follow standards, they killed their old proprietary filters in IE 10 which I rely on for emulation. On the other hand they introduced the real CSS filters, but those are limited to a usage inside SVGs. They cannot be applied to HTML-elements. 
+###A word regarding IE 10+###
 
-Even triggering legacy mode does not help any more. So this is why we are left at the end with no hook/support at all in IE10 :(
+Why is IE 6 - 9 supported, but not IE 10 or higher? Well, since Microsoft decided to switch sides and to now follow standards, they killed their old proprietary filters beginning with IE 10 which I rely on for emulation. 
 
-###And what about Opera?###
+Altough they did introduce SVG filters sadly those are limited to a usage inside SVGs. They cannot be applied to HTML-elements. 
 
-Opera offers none of the hooks I could use to simulate CSS filter effects. So it is basically up to you people requesting support for CSS filter effects from Opera. But I might guess that you will remain unheard since Opera is very mobile and low-end device focused and filters hurt performance a lot. So it could take its fair amount of time to convince them.
+Even triggering legacy mode does not help any more. So this is why we are left at the end with no hook/support at all in IE10+ :(
 
-Anyway, as far as I am concerned, I took care that once Opera supports filters, even when only prefixed, this polyfill will pick up support automagically.
+###And what about those Presto-based Opera?###
+
+Older Operas with Presto engine are not supported, as they offer none of the hooks I used.
 
 ##Setup##
 
