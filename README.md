@@ -22,7 +22,7 @@ in your stylesheets and the polyfill will take care that it works in as many bro
 * brightness
 * drop-shadow
 
-Have a look at [this overview](http://www.der-schepp.de/css-filters-polyfill/examples/static-vs-animated/static.html).
+Have a look at [this overview](https://Schepp.github.io/CSS-Filters-Polyfill/examples/static-vs-animated/static.html).
 
 \* _the IEs only support 0% or 100% values_
 
@@ -143,13 +143,43 @@ Since the polyfill needs to re-retrieve and parse every stylesheet again I imple
 
 But to make your life easier I implemented a mechanism that looks on the hostname, and when it is "localhost" or when it uses the TLD ".local" or when it's an IP address it turns that caching off.
 
+###Cross Origin Restrictions###
+
+If you practice domain sharding and serve your assets from a different domain than the page you have two options to solve the problem of the poylfill not being allowed to refetch the stylesheets:
+
+a) If you use the same domain, just with different subdomains, e.g. www.yourdomain.com + assets.yourdomain.com, then you can set
+```javascript
+document.domain = "yourdomain.com";
+```
+and you are fine.
+
+b) If you use different domains, then you need to activate HTTP CORS headers (Cross-Origin Resource Sharing) on the machine that hosts the stylesheets. If it is an Apache machine you can add the following to its/an .htaccess in its root:
+
+```
+<IfModule mod_headers.c>
+  <FilesMatch "\.css$">
+    Header set Access-Control-Allow-Origin "*"
+  </FilesMatch>
+</IfModule>
+```
+
+Or if you want more security, replace the * with the requesting domain:
+
+```
+<IfModule mod_headers.c>
+  <FilesMatch "\.css$">
+    Header set Access-Control-Allow-Origin "requestingdomain.com"
+  </FilesMatch>
+</IfModule>
+``` 
+
 ###Examples and Howtos###
 
-See [http://www.der-schepp.de/css-filters-polyfill/examples/](http://www.der-schepp.de/css-filters-polyfill/examples/)
+See [https://Schepp.github.io/CSS-Filters-Polyfill/examples/](https://Schepp.github.io/CSS-Filters-Polyfill/examples/)
 
 ###License###
 
-Copyright (c) 2012 Christian Schepp Schaefer
+Copyright (c) 2012 - 2013 Christian Schepp Schaefer
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
