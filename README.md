@@ -1,7 +1,7 @@
 Polyfilter - a CSS Filters Polyfill
 ===================================
 
-This polyfill takes the official CSS filters syntax and translates it to the different equivalent techniques that the browsers know for those effects:
+This polyfill takes the official CSS Filter Effects syntax, which spec you can find over [here](http://www.w3.org/TR/filter-effects/#FilterProperty) and translates it to the different equivalent techniques that the browsers know for those effects:
 
 * Prefixing for WebKit/Blink-based Browsers
 * Translating to SVG-filters for Firefox
@@ -45,6 +45,8 @@ and
 * Blackberry Browser 10+, 
 * Firefox 4+ on Mobile,
 * IE on Windows Phone 7, which just supports grayscale.
+
+Also have a look at [http://caniuse.com/css-filters](http://caniuse.com/css-filters)
 
 ##Not supported Browsers##
 
