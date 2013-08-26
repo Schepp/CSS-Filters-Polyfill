@@ -3,9 +3,9 @@ Polyfilter - a CSS Filters Polyfill
 
 This polyfill takes the official CSS Filter Effects syntax, which spec you can find over [here](http://www.w3.org/TR/filter-effects/#FilterProperty) and translates it to the different equivalent techniques that the browsers know for those effects:
 
-* Prefixing for WebKit/Blink-based Browsers
-* Translating to SVG-filters for Firefox
-* Translating to DirectX-filters for IE 6-9
+* Prefixing for WebKit/Blink-based browsers
+* Translating into SVG-filters for Firefox
+* Translating into DirectX-filters for IE 6-9
 
 For instance, this allows you to assign a property like 
 
