@@ -22,7 +22,7 @@ in your stylesheets and the polyfill will take care that it works in as many bro
 * brightness
 * drop-shadow
 
-Have a look at [this overview](https://Schepp.github.io/CSS-Filters-Polyfill/examples/static-vs-animated/static.html).
+Have a look at [this overview](http://schepp.github.io/CSS-Filters-Polyfill/examples/static-vs-animated/static.html).
 
 \* _the IEs only support 0% or 100% values_
 
@@ -175,7 +175,7 @@ Or if you want more security, replace the * with the requesting domain:
 
 ###Examples and Howtos###
 
-See [https://Schepp.github.io/CSS-Filters-Polyfill/examples/](https://Schepp.github.io/CSS-Filters-Polyfill/examples/)
+See [http://schepp.github.io/CSS-Filters-Polyfill/examples/](http://schepp.github.io/CSS-Filters-Polyfill/examples/)
 
 ###License###
 
