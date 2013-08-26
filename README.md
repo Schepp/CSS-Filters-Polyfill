@@ -41,9 +41,10 @@ and
 
 * iOS 6+ Safari/Chrome/Webview
 * Chrome 28+ on Android, 
+* Opera Mobile 14+,
 * Blackberry Browser 10+, 
 * Firefox 4+ on Mobile,
-* IE on Windows Phone 7+, which just supports grayscale.
+* IE on Windows Phone 7, which just supports grayscale.
 
 ##Not supported Browsers##
 
