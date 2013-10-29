@@ -77,7 +77,16 @@ First create a `<script>` element in which you define the **absolute(!)** path t
 </script>
 ```
 
-This is important for the IEs.  
+This is important both for the old IEs and the web worker script.  
+
+Should you not want the document stylesheets automatically parsed, like when your plan is to apply filters via JavaScript, then you can additionally set a `polyfilter_skip_stylesheets` switch:
+
+```html
+<script>  
+	var polyfilter_scriptpath = '/css-filters-polyfill/lib/';  
+  var polyfilter_skip_stylesheets = true;  
+</script>
+```
 Then you link `cssParser.js` and `css-filters-polyfill.js` from the polyfill library. 
 
 ```html
