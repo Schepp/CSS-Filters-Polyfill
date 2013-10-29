@@ -84,7 +84,7 @@ Should you not want the document stylesheets automatically parsed, like when you
 ```html
 <script>  
 	var polyfilter_scriptpath = '/css-filters-polyfill/lib/';  
-  var polyfilter_skip_stylesheets = true;  
+	var polyfilter_skip_stylesheets = true;  
 </script>
 ```
 Then you link `cssParser.js` and `css-filters-polyfill.js` from the polyfill library. 
