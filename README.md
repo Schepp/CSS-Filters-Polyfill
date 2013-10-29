@@ -148,12 +148,6 @@ window.setInterval(function(){
 
 _Note: This again does not work for IE 6 & 7. They just ignore any programmatic assignment._
 
-###A note on stylesheet caching###
-
-Since the polyfill needs to re-retrieve and parse every stylesheet again I implemented localStorage caching. Contents of stylesheets that have successfully been retrieved will get stored in localStorage. On the next reload of the page the polyfill will use the stylesheet from localStorage so that it renders quicker. When that is done it will retrieve the file and replace localStorage contents. That means that when you develop you would need to refresh twice to see any changes you made regarding filters. 
-
-But to make your life easier I implemented a mechanism that looks on the hostname, and when it is "localhost" or when it uses the TLD ".local" or when it's an IP address it turns that caching off.
-
 ###Cross Origin Restrictions###
 
 If you practice domain sharding and serve your assets from a different domain than the page you have two options to solve the problem of the poylfill not being allowed to refetch the stylesheets:
