@@ -34,8 +34,16 @@
 
 
 	<script>
-		// this is important for the IEs
-		var polyfilter_scriptpath = '/css-filters-polyfill/lib/';
+		// this is important
+		switch(location.host){
+			default:
+				var polyfilter_scriptpath = '/css-filters-polyfill/lib/';
+			break;
+		
+			case 'schepp.github.io':
+				var polyfilter_scriptpath = '/CSS-Filters-Polyfill/css-filters-polyfill/lib/';
+			break;
+		}
 	</script>
 	<script src="../../lib/contentloaded.js"></script>
 	<script src="../../lib/cssParser.js"></script>
