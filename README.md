@@ -13,7 +13,7 @@ For instance, this allows you to assign a property like
 
 in your stylesheets and the polyfill will take care that it works in as many browsers as possible.
 
-##Supported Filters##
+## Supported Filters
 
 * grayscale*
 * sepia*
@@ -26,7 +26,7 @@ Have a look at [this overview](http://schepp.github.io/CSS-Filters-Polyfill/exam
 
 \* _the IEs only support 0% or 100% values_
 
-##Supported Browsers##
+## Supported Browsers
 
 Currently the polyfill is able to support
 
@@ -48,14 +48,14 @@ and
 
 Also have a look at [http://caniuse.com/css-filters](http://caniuse.com/css-filters)
 
-##Not supported Browsers##
+## Not supported Browsers
 
 * IE 10+,
 * older Presto-based Operas,
 * Opera Mini,
 * Android browser
 
-###A word regarding IE 10+###
+### A word regarding IE 10+
 
 Why is IE 6 - 9 supported, but not IE 10 or higher? Well, since Microsoft decided to switch sides and to now follow standards, they killed their old proprietary filters beginning with IE 10 which I rely on for emulation. 
 
@@ -63,11 +63,11 @@ Altough they did introduce SVG filters sadly those are limited to a usage inside
 
 Even triggering legacy mode does not help any more. So this is why we are left at the end with no hook/support at all in IE10+ :(
 
-###And what about those Presto-based Opera?###
+### And what about those Presto-based Opera?
 
 Older Operas with Presto engine are not supported, as they offer none of the hooks I used.
 
-##Setup##
+## Setup
 
 First create a `<script>` element in which you define the **absolute(!)** path to the polyfill library (the stuff in the /lib/ subfolder) in a variable named `polyfilter_scriptpath`, like so:  
 
@@ -97,9 +97,9 @@ Then you link `cssParser.js` and `css-filters-polyfill.js` from the polyfill lib
 
 In an ideal world you should minify and concatenate both of them together with your other JavaScript. If you don't want your page to get blocked by script-loading you put the scripts way down before the closing `</body>`. This might lead to some flickering of the filter effects during loading. If you can't live with the short flickering, put the scripts in the `<head>` of the page. Then it'll be gone, but your page will load slower. You decide.
 
-##Usage##
+## Usage
 
-###Declarative assignment###
+### Declarative assignment
 
 This polyfill supports filter declarations in embedded (`<style>`) and external (`<link rel="stylesheet">`) stylesheets. It does not support inline-styles (i.e. style-attributes).
 
@@ -119,7 +119,7 @@ And you can even assign two filters at once, e.g.
 }
 ```
 
-###Programmatic assignment###
+### Programmatic assignment
 
 In addition the polyfill also extends the JavaScript CSSStyleDeclaration object, so that you can assign filter styles on the fly as you are used to with CSS. But instead of exposing a `element.style.filter` property as one would think, you instead need to address `element.style.polyfilter`, e.g.:
 
@@ -140,7 +140,7 @@ element.style.polyfilter = 'sepia(1) blur(10px)';
 
 _Note: This does not work for IE 6 & 7. They just ignore any programmatic assignment._
 
-###Animations###
+### Animations
 
 Likewise, if you want to animate a filter, then you do this:
 
@@ -158,7 +158,7 @@ window.setInterval(function(){
 
 _Note: This again does not work for IE 6 & 7. They just ignore any programmatic assignment._
 
-###Cross Origin Restrictions###
+### Cross Origin Restrictions
 
 If you practice domain sharding and serve your assets from a different domain than the page you have two options to solve the problem of the poylfill not being allowed to refetch the stylesheets:
 
@@ -188,11 +188,11 @@ Or if you want more security, replace the * with the requesting domain:
 </IfModule>
 ``` 
 
-###Examples and Howtos###
+### Examples and Howtos
 
 See [http://schepp.github.io/CSS-Filters-Polyfill/examples/](http://schepp.github.io/CSS-Filters-Polyfill/examples/)
 
-###License###
+### License
 
 Copyright (c) 2012 - 2013 Christian Schepp Schaefer
 
